@@ -1,0 +1,18 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dogbyte.shiftworlds">
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+  <!-- No INTERNET permission: shiftworlds.html is fully self-contained
+       (all sprites embedded as data URIs, no network fetches). -->
+  <application android:label="Shiftworlds" android:icon="@mipmap/ic_launcher"
+      android:roundIcon="@mipmap/ic_launcher_round"
+      android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:hardwareAccelerated="true">
+    <activity android:name=".MainActivity" android:exported="true"
+        android:screenOrientation="landscape"
+        android:configChanges="orientation|screenSize|keyboardHidden">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+  </application>
+</manifest>

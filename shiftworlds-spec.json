@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "name": "Shiftworlds",
+  "seed": 20261101,
+  "genre": "platformer",
+  "description": "A platformer where you shift between two overlapping realities: the Amber world and the Void world. One key, two worlds, one crossing.",
+  "version": 1
+ },
+ "theme": {
+  "palette": {
+   "primary": "#8a6ac9",
+   "secondary": "#5a3f8e",
+   "accent": "#7af7ff",
+   "sky": "#4a3a7e",
+   "horizon": "#b08ad8",
+   "ground": "#6a559e",
+   "groundAlt": "#7a65ae",
+   "rock": "#8a7ab8",
+   "fog": "#a08ad0",
+   "water": "#7af7ff"
+  },
+  "environment": "dreamscape",
+  "timeOfDay": "dusk",
+  "weather": "clear",
+  "retroFilter": true,
+  "bloom": true
+ },
+ "world": {
+  "terrain": {
+   "type": "platforms",
+   "size": 260,
+   "maxHeight": 14,
+   "roughness": 0.5,
+   "water": false,
+   "waterLevel": -2
+  },
+  "boundary": "walls",
+  "gravity": -22,
+  "scatter": {
+   "density": 0.65,
+   "trees": false,
+   "rocks": true,
+   "crystals": true,
+   "buildings": 0,
+   "ruins": false
+  }
+ },
+ "player": {
+  "type": "humanoid",
+  "health": 100,
+  "speed": 7,
+  "jump": 9,
+  "abilities": [
+   "doubleJump",
+   "dash"
+  ],
+  "weapon": "none",
+  "camera": "side"
+ },
+ "enemies": [
+  {
+   "kind": "walker",
+   "count": 6,
+   "health": 30,
+   "speed": 4.5,
+   "damage": 9,
+   "weapon": "melee"
+  }
+ ],
+ "objective": {
+  "type": "reach",
+  "count": 0,
+  "timeLimit": 0,
+  "description": "Cross the two worlds and reach the far beacon",
+  "stages": [
+   {
+    "id": "shards",
+    "type": "collect",
+    "count": 20,
+    "timeLimit": 0,
+    "description": "Chapter I — Gather the shards"
+   },
+   {
+    "id": "storm",
+    "type": "survive",
+    "count": 0,
+    "timeLimit": 20,
+    "description": "Chapter II — Hold the crossing"
+   },
+   {
+    "id": "beacon",
+    "type": "reach",
+    "count": 0,
+    "timeLimit": 0,
+    "description": "Chapter III — Reach the far beacon"
+   }
+  ]
+ },
+ "pickups": {
+  "coins": 60,
+  "health": 4,
+  "ammo": 0,
+  "powerups": 2
+ },
+ "rules": {
+  "lives": 3,
+  "difficulty": "normal"
+ },
+ "audio": {
+  "music": true,
+  "mood": "mysterious",
+  "tempo": 112,
+  "key": 5,
+  "mode": "dorian",
+  "sfxVolume": 0.9,
+  "musicVolume": 0.7
+ },
+ "narrative": {
+  "premise": "Two worlds overlap above the void: Amber, warm and solid, and the Void, cold and strange. The far beacon only exists in the Void world, and the broken bridge across the middle only exists one world at a time. Shift between them, gather the shards, and reach the beacon.",
+  "winText": "The beacon burns in both worlds. You made the crossing.",
+  "loseText": "The worlds slipped apart. Try the crossing again."
+ },
+ "progression": {
+  "enabled": true,
+  "xpPerKill": 20,
+  "xpPerPickup": 5
+ },
+ "custom": {
+  "legacyOperators": [
+   1
+  ]
+ }
+}
